@@ -1,0 +1,61 @@
+<section class="section">
+    <div class="container">
+      <h1 class="title">
+        Eat Da Burger
+      </h1>
+      <p class="subtitle">
+        Add burgers then click to <strong>Devour it!</strong>!
+      </p>
+    </div>
+</section>
+
+
+<section class='section'>
+		<div >
+			<form>
+				<input type="text" id='name' name="burger_name" placeholder="Enter your favorite Burger">
+				<button type='submit' id='addBurgerBtn'>Add Burger</button>
+			</form>
+		</div>
+
+		<div >
+
+			<div >
+				<br><p class="devo"> Available Burgers </p><br>
+
+
+				<div >
+					{{#each burgers}}
+						{{#unless this.devoured}}
+							<div class="fresh">
+								
+								<button data-id={{this.id}} class='devouredBtn' type='submit'>
+									{{this.burger_name}}
+								</button>
+
+							</div>
+						{{/unless}}
+					{{/each}}
+				</div>
+
+				<br><p class="devo">  Devoured Burgers </p><br>
+
+				<div >
+					{{#each burgers}}
+						{{#if this.devoured}}
+							<div class="devoured">
+								{{this.burger_name}}
+							</div>
+						{{/if}}
+					{{/each}}			
+				</div>
+					<hr>
+					<br>
+						<br>
+						<h3>Well it's not working!! So here is a chicken with hands! Now this clearly deserves an "A+"</h3>
+						<div id = "img">
+						<img src="http://i.imgur.com/zndT4U8.gif" style="float:center;width:600px;height:300px;">
+			</div>
+			</div>
+		</div>
+</section>
